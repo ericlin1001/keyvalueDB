@@ -116,6 +116,7 @@ function main(){
 	if(isset($_GET["value"])){
 	$value=$_GET["value"];
 	}
+	echo "Result:<!--ResultBegin-->";
 	if($method=="get"){
 		echo $kv->get($key);
 	}else if($method=="set"){
@@ -133,6 +134,7 @@ function main(){
 		//Error
 		echo "Errors:No this method.\n";
 	}
+	echo "<!--ResultEnd-->\n";
 		?>
 <form action="" method="get" >
 Method:<input type="radio" name="method" value="get">get <br/> 
